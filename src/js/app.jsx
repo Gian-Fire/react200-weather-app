@@ -1,7 +1,7 @@
 import React from 'react';
-import Search from './components/Search/Search.jsx';
-import City from './components/City/City.jsx';
-import History from './components/History/History.jsx';
+import Search from './components/Search';
+import City from './components/City';
+import History from './components/History';
 
 export default class App extends React.Component {
   
@@ -9,7 +9,10 @@ export default class App extends React.Component {
     return (
       <div className='container'>
 
-        <div className='jumbotron bg-dark text-white'>
+        <div 
+          className='jumbotron bg-dark text-white'
+          style={{ opacity: .9 }}
+        >
           <h1 className='text-center'>
             Synergy Weather App
           </h1>
@@ -18,15 +21,15 @@ export default class App extends React.Component {
           </h4>
         </div>
         
-        <Search/>
-
+          <Search />
+        
         <div 
           className='row'
           id='spacing'
-          style={{padding: 20}}
+          style={{ padding: 20 }}
         >
-          <City/>
-          <History/>
+          <City />
+          <History />
         </div>
 
       </div>

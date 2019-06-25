@@ -1,18 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class City extends React.Component {
+export default class City extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
+    const { 
+      cityInput,
+      lon,
+      lat,
+      temp,
+      pressure,
+      humidity,
+      temp_min,
+      temp_max,
+      windSpeed
+    } = this.props;
+
     return (
       <div 
       className="card bg-dark text-white col-md-8"
-    >
+      style={{ opacity: .9 }}
+      >
+
       <div className="card-header">
         City Information
       </div>
+
       <div className="card-body">
-        <h1 className="card-title text-center">Some City</h1>
-        <p className="card-text text-center">Latitude and Longitude: NUMBERS, ALSO NUMBERS</p>
+        <h1 className="card-title text-center">{ cityInput }</h1>
+        <p className="card-text text-center">Latitude and Longitude: {lat}, {lon}</p>
         <hr/>
         <div 
           className='row'
@@ -27,11 +45,12 @@ export default class City extends React.Component {
                 <p 
                 className='text-center'
                 > 
-                  SOME DATA
+                  { temp }°F
                 </p>
               </div>
             </div>
           </div>
+
           <div className = 'col-md-4' >
             <div className = 'card bg-dark text-white' >
               <div className = 'card-body'>
@@ -41,11 +60,12 @@ export default class City extends React.Component {
                 <p 
                 className='text-center'
                 > 
-                  SOME DATA
+                  { pressure }mb
                 </p>
               </div>
             </div>
           </div>
+
           <div className = 'col-md-4' >
             <div className = 'card bg-dark text-white' >
               <div className = 'card-body'>
@@ -55,12 +75,13 @@ export default class City extends React.Component {
                 <p 
                 className='text-center'
                 > 
-                  SOME DATA
+                  { humidity }%
                 </p>
               </div>
             </div>
           </div>
         </div>
+
         <div 
           className='row'
           style={{padding: 5}}
@@ -74,11 +95,12 @@ export default class City extends React.Component {
                 <p 
                 className='text-center'
                 > 
-                  SOME DATA
+                  { temp_min }°F
                 </p>
               </div>
             </div>
           </div>
+
           <div className = 'col-md-4' >
             <div className = 'card bg-dark text-white' >
               <div className = 'card-body'>
@@ -88,11 +110,12 @@ export default class City extends React.Component {
                 <p 
                 className='text-center'
                 > 
-                  SOME DATA
+                  { temp_max }°F
                 </p>
               </div>
             </div>
           </div>
+
           <div className = 'col-md-4' >
             <div className = 'card bg-dark text-white' >
               <div className = 'card-body'>
@@ -102,13 +125,14 @@ export default class City extends React.Component {
                 <p 
                 className='text-center'
                 > 
-                  SOME DATA
+                  { windSpeed }mph
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
     );
   }
