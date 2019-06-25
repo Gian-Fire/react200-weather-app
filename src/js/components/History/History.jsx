@@ -23,9 +23,7 @@ export default class History extends Component {
                 <li key={ index }>
                   <p>{ histories.cityInput } - { histories.date }</p>
                 </li>
-              )
-            }
-
+              )}
             )}
           </ul>
         </div>
