@@ -7,4 +7,4 @@ weather in any city in the world.
 
 ## Check it out!
 
-You can find my portfolio here: [Weather App](https://gd-react200-weather-app.herokuapp.com/ "Weather App")
+You can find my app here: [Weather App](https://gd-react200-weather-app.herokuapp.com/ "Weather App")
